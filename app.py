@@ -1,26 +1,27 @@
 import streamlit as st
 import pandas as pd
-import joblib
 import os
+from datetime import datetime
+
 
 st.set_page_config(
     page_title="VizVal AI",
     page_icon="🏠",
     layout="wide"
 )
-
-# --------------------------------------------------
-# LOAD ML MODEL
-# --------------------------------------------------
-
 @st.cache_resource
 def load_model():
-    return joblib.load("vizag_property_price_model.pkl")
+    import joblib
+
+    model_path = os.path.join(
+        os.path.dirname(__file__),
+        "vizag_property_price_model.pkl"
+    )
+
+    return joblib.load(model_path)
 
 
-# --------------------------------------------------
 # SIDEBAR
-# --------------------------------------------------
 
 st.sidebar.title("🏠 Real Estate")
 
