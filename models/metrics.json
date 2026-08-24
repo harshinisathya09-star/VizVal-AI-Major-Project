@@ -1,0 +1,66 @@
+{
+  "source_message": "No CSV found in data/raw, using separated synthetic demonstration data.",
+  "best_ml_model": "XGBoost",
+  "interval_error_90": 3244101.4000000004,
+  "quality": {
+    "rows": 1500,
+    "columns": 11,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "invalid_records": 0,
+    "column_names": [
+      "area_sqft",
+      "bedrooms",
+      "bathrooms",
+      "property_age",
+      "floor",
+      "total_floors",
+      "parking",
+      "furnished",
+      "property_type",
+      "location",
+      "price"
+    ],
+    "dtypes": {
+      "area_sqft": "int64",
+      "bedrooms": "int64",
+      "bathrooms": "int64",
+      "property_age": "int64",
+      "floor": "int64",
+      "total_floors": "int64",
+      "parking": "str",
+      "furnished": "str",
+      "property_type": "str",
+      "location": "str",
+      "price": "int64"
+    }
+  },
+  "metrics": [
+    {
+      "Model": "XGBoost",
+      "MAE": 1493696.25,
+      "RMSE": 2072087.0253230196,
+      "R2": 0.9554141759872437,
+      "MAPE": 8.261563224199795
+    },
+    {
+      "Model": "Linear Regression",
+      "MAE": 2226542.395960441,
+      "RMSE": 2899933.3137648054,
+      "R2": 0.9126712729834976,
+      "MAPE": 14.33521393773008
+    },
+    {
+      "Model": "Random Forest",
+      "MAE": 2211707.8798130774,
+      "RMSE": 3111264.1826644805,
+      "R2": 0.8994794430784147,
+      "MAPE": 12.35779630813158
+    }
+  ],
+  "model_files": {
+    "Linear Regression": "linear_regression_model.pkl",
+    "Random Forest": "random_forest_model.pkl",
+    "XGBoost": "xgboost_model.pkl"
+  }
+}
