@@ -4,3 +4,4 @@ numpy
 scikit-learn==1.9.0
 joblib==1.5.3
 xgboost
+plotly==6.3.0
